@@ -64,14 +64,14 @@ export const MainPage = () => {
       <Header></Header>
       <Flex mih={50} bg="rgba(0, 0, 0, .3)" gap="xl" justify="center" align="center" direction="row" wrap="wrap">
         <Select
-          label="From"
+          label="Want to learn"
           placeholder="Pick language"
           data={LanguageList}
           value={fromLanguage}
           onChange={setFromLanguage}
         />
         <Select
-          label="To"
+          label="Native Language"
           placeholder="Pick language"
           data={LanguageList}
           value={toLanguage}
@@ -145,6 +145,9 @@ export const MainPage = () => {
               {isUserSentenceTrue !== null && <LLMResponse response={isUserSentenceTrue}></LLMResponse>}
             </Flex>
           </Flex>
+          <Button variant="light" rightSection={<IconArrowRight size={14} />} size="lg">
+            Next word
+          </Button>
         </Flex>
       )}
     </div>
