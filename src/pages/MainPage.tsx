@@ -3,6 +3,7 @@ import { IconArrowRight } from "@tabler/icons-react";
 import { ChangeEvent, useEffect, useState } from "react";
 import { LanguageList, LanguagesType } from "../types/Languages";
 import { LLMResponse } from "../components/LLMResponse";
+import { Header } from "../components/Header/Header";
 
 export const MainPage = () => {
   const [visibleContent, setVisibleContent] = useState(false);
@@ -60,6 +61,7 @@ export const MainPage = () => {
 
   return (
     <div className="bg-black h-screen	flex justify-center items-center flex-col gap-10">
+      <Header></Header>
       <Flex mih={50} bg="rgba(0, 0, 0, .3)" gap="xl" justify="center" align="center" direction="row" wrap="wrap">
         <Select
           label="From"
